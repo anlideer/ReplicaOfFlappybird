@@ -7,7 +7,10 @@ public class PlayerController : MonoBehaviour {
     public AudioSource deadAudio;
     public AudioSource flyAudio;
 
-    public float upForce = 1000f; 
+    public float upForce = 1000f;
+    public static bool realiving = false;
+    public Vector3 realiveP = new Vector3(-3.5f, 0.13f, 0);
+
 
     Rigidbody2D rb;
     Animator anim;
@@ -46,6 +49,14 @@ public class PlayerController : MonoBehaviour {
             deadAnimPlayed = true;
             anim.Play("dead");
             deadAudio.Play();
+        }
+
+        if (realiving)
+        {
+            realiving = false;
+            rb.velocity = new Vector2(0, 0);
+            transform.position = realiveP;
+            // TODO: 添加音效！
         }
 	}
 }

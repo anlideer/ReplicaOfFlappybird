@@ -192,8 +192,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  destroyTime: 15
-  scoreUp: {fileID: 82681880006858384, guid: 858a382bbdf82bb4082b4a18b3c22180, type: 2}
+  destroyTime: 20
+  factor: 1.2
+  speedSetted: 0
 --- !u!114 &114667086504547204
 MonoBehaviour:
   m_ObjectHideFlags: 1

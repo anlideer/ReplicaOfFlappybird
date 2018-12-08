@@ -18,7 +18,15 @@ public class Ground : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            GM.isAlive = false;
+            if (GM.skills[0] > 0)
+            {
+                GM.skills[0] -= 1;
+                PlayerController.realiving = true;
+            }
+            else
+            {
+                GM.isAlive = false;
+            }
         }
     }
 }
